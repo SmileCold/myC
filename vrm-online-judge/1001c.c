@@ -105,6 +105,7 @@ int main()
 	    while((h = getchar()) != '\n' && h !=EOF);
 	    mak(m, n, a, b, c, f);
 	}
+	free(f);
     }
     return 0;
 }
