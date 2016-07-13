@@ -43,7 +43,7 @@ void * fr(ch * head)
 {
     ch * p, * q;
     p = q = head;
-    while (q = NULL)
+    while (q != NULL)
     {
 	p = q->b;
 	free(q);
