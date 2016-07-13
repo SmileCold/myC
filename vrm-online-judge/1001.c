@@ -8,11 +8,13 @@ typedef struct cha
     struct cha * b;
 }ch;
 
-ch * creat(int x)
+char h;
+
+ch * creat(int m, int n)
 {
-    int i = 0;
+    int i = 0, t = 1;
     ch * p, * q, * head;
-    for (; i < x; i++)
+    for (; i < m * n; i++)
     {
 	if (i == 0)
 	{
@@ -22,6 +24,15 @@ ch * creat(int x)
 	else q = (ch *)malloc(sizeof(ch));
 	p->b = q;
 	scanf("%c", &q->a);
+	if (t == m)
+	{
+	    while((h = getchar()) != '\n' && h !=EOF);
+	    t = 1;
+	}
+	else
+	{
+	    t++;
+	}
 	q->b = NULL;
 	p = q;
     }
@@ -146,14 +157,17 @@ int main()
     {
 	sum++;
 	scanf("%d%d", &m, &n);
+	while((h = getchar()) != '\n' && h !=EOF);
 	if (m < 0 || n < 0) break;
-	head = creat(n * m);
+	head = creat(n, m);
 	scanf("%d", &num);
+	while((h = getchar()) != '\n' && h !=EOF);
 	int i = 0;
 	printf("Case #%d:\n", sum);
 	for (; i < num; i++)
 	{
 	    scanf("%d%d%d", &a, &b, &c);
+	    while((h = getchar()) != '\n' && h !=EOF);
 	    mak(m, n, a, b, c, head);
 	}
 	fr(head);

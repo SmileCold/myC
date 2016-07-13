@@ -5,6 +5,7 @@ int main()
     char c;
     char a;
     printf("1\n");
+    scanf("d");
     while((c = getchar()) != '\n' && c !=EOF);
     printf("2\n");
     scanf("%c", &a);
