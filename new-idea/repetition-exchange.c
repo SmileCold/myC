@@ -93,5 +93,9 @@ int * grpnum(int num, int cnu, int cmn)
 
 int ** estarg(int argn, int num)
 {
+  int ** arg;
+  arg = (int **)malloc(2 * sizeof(int *));
+  arg[0] = (int *)malloc(argn * sizeof(int));
+  arg[1] = (int *)malloc(argn * sizeof(int));
   
 }
